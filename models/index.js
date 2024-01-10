@@ -12,12 +12,12 @@ const sequelize = new Sequelize(
             min: dbConfig.pool.min,
             acquire: dbConfig.pool.acquire,
             idle: dbConfig.pool.idle
-        }
+        },
     });
-    const db = {};
-    db.sequelize = Sequelize;
-    db.sequelize = sequelize;
+const db = {};
+db.sequelize = Sequelize;
+db.sequelize = sequelize;
 
-    // define semua models pada apk
-    db.quizzes = require('./quiz')(sequelize, Sequelize);
-    module.exports = db;
+// define semua models pada apk
+db.quizzes = require('./quiz')(sequelize, Sequelize);
+module.exports = db;
